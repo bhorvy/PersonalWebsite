@@ -1,16 +1,15 @@
 import './App.css';
-import Personalprojects from './components/Personalprojects';
+import HeaderNavBar from './components/HeaderNavBar';
+import MainPage from './components/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Hello</p>
+      <header>
+        <HeaderNavBar/>
       </header>
-      <main>
-      <h2 className="intro">Hello, I'm Brennan!</h2>
-      <a href="../Resume.pdf">My Resume</a>
-      <Personalprojects />
+      <main className="gradient-bg">
+      <MainPage/>
       </main>
       <footer className="App-footer">
       <p>That Guy frfr</p>

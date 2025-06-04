@@ -1,14 +1,3 @@
-header {
-  background-color: #282c34;
-  min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .intro {
   text-align: center;
 }
@@ -27,3 +16,18 @@ main {
   min-height: 70vh;
 }
 
+.custom-navbar-height {
+  min-height: 12vh;
+}
+
+.brand-large{
+  font-size: 2rem;
+}
+
+.brand-med {
+  font-size: 1.2rem;
+}
+
+.gradient-bg {
+  background-image: linear-gradient(40deg, rgb(106, 126, 253) 10%, rgb(140, 140, 140));
+}

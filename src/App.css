@@ -1,23 +1,25 @@
-.intro {
-  text-align: center;
+.App {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-  background-color: #282c34;
-  min-height: 15vh;
+  min-height: 8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 main {
-  min-height: 70vh;
+  flex: 1;
+  display: flex;
 }
 
-.custom-navbar-height {
-  min-height: 12vh;
+header {
+  min-height: 8vh;
 }
 
 .brand-large{
@@ -29,5 +31,35 @@ main {
 }
 
 .gradient-bg {
-  background-image: linear-gradient(40deg, rgb(106, 126, 253) 10%, rgb(140, 140, 140));
+  background-image: linear-gradient(90deg, rgb(153, 153, 153), rgb(255, 255, 255),  rgb(153, 153, 153));
+}
+
+.div-style {
+  background-color: black;
+  margin: 10px;
+  color: white;
+  border-radius: 12px;
+}
+
+.div-style-2 {
+  background-color: black;
+  margin: 10px;
+  color: white;
+  border-radius: 12px;
+  max-width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+   width: 32px;
+  height: 32px;
+  color: black;
+  fill: currentColor;
+  transition: transform 0.2s;
+}
+
+.icons:hover {
+  transform: scale(1.2);
+  color: lightskyblue; /* Optional: changes color on hover */
 }

@@ -1,20 +1,28 @@
 import './App.css';
 import HeaderNavBar from './components/HeaderNavBar';
+import Footer from './components/Footer';
 import MainPage from './components/MainPage';
+import Projects from './components/Projects';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <header>
         <HeaderNavBar/>
       </header>
       <main className="gradient-bg">
-      <MainPage/>
+      <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="projects" element={<Projects />} />
+        </Routes>
       </main>
       <footer className="App-footer">
-      <p>That Guy frfr</p>
+      <Footer />
       </footer>
     </div>
+    </Router>
   );
 }
 

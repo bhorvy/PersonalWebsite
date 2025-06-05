@@ -25,7 +25,12 @@ header {
 .brand-large{
   font-size: 2rem;
 }
-
+.parent-div {
+   min-height: 80vh;
+    display: flex;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+}
 .brand-med {
   font-size: 1.2rem;
 }
@@ -36,19 +41,22 @@ header {
 
 .div-style {
   background-color: black;
-  margin: 10px;
+  margin: 25px;
   color: white;
   border-radius: 12px;
 }
 
 .div-style-2 {
-  background-color: black;
-  margin: 10px;
+  background-color: transparent;
+  margin: 25px;
   color: white;
   border-radius: 12px;
-  max-width: 50%;
-  align-items: center;
-  justify-content: center;
+}
+
+.div-style:hover {
+  background-color: lightskyblue;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .icons {
@@ -62,4 +70,10 @@ header {
 .icons:hover {
   transform: scale(1.2);
   color: lightskyblue; /* Optional: changes color on hover */
+}
+
+.me {
+  margin: 25px;
+  border-radius: 20px;
+  object-fit: cover;
 }

@@ -4,7 +4,7 @@ export default function MainPage() {
        <div className="container text-center">
             <div className="row">
                 <div className="col div-style">
-               <img src="../test.png" alt="picutre of me eventually"></img>
+               <img src="../me.jpg" alt="picture of me :)"></img>
                 </div>
                 <div className="col d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '20vh' }}>
                 <h2>Hello, I'm Brennan.</h2>

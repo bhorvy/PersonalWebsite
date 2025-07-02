@@ -47,6 +47,13 @@ header {
 }
 
 .div-style-2 {
+  background-color: black;
+  margin: 25px;
+  color: white;
+  border-radius: 12px;
+}
+
+.div-style-3 {
   background-color: transparent;
   margin: 25px;
   color: white;

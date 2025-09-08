@@ -9,7 +9,7 @@ export default function MainPage() {
                     <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style-2" style={{ minHeight: '40vh', minWidth: '40vh'  }}>
                         <h2>Hello, I'm Brennan.</h2>
                         <p className="main-p">Computer Science Student at the University of Regina</p>
-                        <p className="main-p">Currently: Work Term with SGI 🚗</p>
+                        <p className="main-p">Currently: Back to School 📚</p>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@ export default function MainPage() {
                     <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh' ,minWidth: '40vh' }}
                     onClick={()=> window.location.href ="AboutMe"}>
                         <h5>About Me</h5>
-                        <p>22 year old fourth year student, average of 89%. I like "trying" coding. </p>
+                        <p>22 year old fourth year student, average of 89%. I like building things, and coding is a means to an end. </p>
                     </div>
                     <div className="col-lg-4 d-flex flex-column align-items-center justify-content-center text-center div-style-2" style={{ minHeight: '30vh', minWidth: '40vh' }}>
                         <h2>Technologies</h2>

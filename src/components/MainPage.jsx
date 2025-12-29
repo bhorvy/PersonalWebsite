@@ -7,7 +7,7 @@ export default function MainPage() {
                         <img className="me" src="../me.jpg" alt="me :)" style={{ maxHeight: '40vh', minHeight: '40vh', minWidth: '40vh' }}/>
                     </div>
                     <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style-2" style={{ minHeight: '40vh', minWidth: '40vh'  }}>
-                        <h2>Hello, I'm Brennan.</h2>
+                        <h2 data-usal="text-shimmer split-letter duration-2000 split-delay-100">Hello, I'm Brennan</h2>
                         <p className="main-p">Computer Science Student at the University of Regina</p>
                         <p className="main-p">Currently: Back to School 📚</p>
                     </div>

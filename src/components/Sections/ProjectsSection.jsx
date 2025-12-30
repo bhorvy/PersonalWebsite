@@ -27,6 +27,7 @@ function AboutMe() {
     <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
        src="../../../city.jpg" 
+       alt='City Skyline'
        style={{
          width: '100vw',
          height: '95vh',

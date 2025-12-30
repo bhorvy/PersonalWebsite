@@ -17,6 +17,7 @@ function HeroSection() {
     <div style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
        src="../../../b&w.jpg" 
+       alt='Me, in Black & White'
        style={{
          width: '100vw',
          height: '95vh',

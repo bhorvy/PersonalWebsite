@@ -27,6 +27,7 @@ function AboutMe() {
     <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
        src="../../../stadium.jpg" 
+       alt='Colorado State Stadium'
        style={{
          width: '100vw',
          height: '92vh',

@@ -3,7 +3,7 @@ function ContactSection() {
   return (
     <div style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
-       src="../../../circle.jpg" 
+       src="../../../PhotosNDocs/circle.jpg" 
        alt='Tube with guy at end b&w'
        style={{
          width: '100vw',

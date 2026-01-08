@@ -24,7 +24,7 @@ function ResumeSection() {
   return (
  <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
-      src="../../../birb.jpg" 
+      src="../../../PhotosNDocs/birb.jpg" 
       alt='Birds in the woods'
       style={{
         width: '100vw',

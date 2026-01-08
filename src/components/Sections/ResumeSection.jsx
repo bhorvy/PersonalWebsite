@@ -1,17 +1,39 @@
+import { useState, useRef, useEffect } from 'react';
 import '../../App.css';
 
 function ResumeSection() {
+ const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef(null);
+  const [sectionTop, setSectionTop] = useState(0);
 
+  useEffect(() => {
+    if (sectionRef.current) {
+      setSectionTop(sectionRef.current.offsetTop);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  const parallaxOffset = Math.max(0, (scrollY - sectionTop) * 0.3);
   return (
-    <div style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
+ <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
-       src="../../../birb.jpg" 
-       alt='Birds in the woods'
-       style={{
-         width: '100vw',
-         height: '95vh',
-         objectFit: 'cover',
-         display: 'block',
+      src="../../../birb.jpg" 
+      alt='Birds in the woods'
+      style={{
+        width: '100vw',
+        height: '95vh',
+        objectFit: 'cover',
+        display: 'block',
+        transform: `translateY(${parallaxOffset}px)`,
+        transition: 'transform 0.1s ease-out'
        }}
      />
      <div 
@@ -31,7 +53,7 @@ function ResumeSection() {
        <div className="row w-100 align-items-center justify-content-center">
         <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}  
           onClick={() => window.open("../../Resume.pdf")}>
-              <h2>Resume</h2>
+              <h2 data-usal="fade-u split-letter split-delay-25">Resume</h2>
         </div>
        </div>
      </div>

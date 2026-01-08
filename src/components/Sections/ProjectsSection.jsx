@@ -54,7 +54,7 @@ function AboutMe() {
        <div className="row w-100 align-items-center justify-content-center">
         <div className="col-lg-4 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }} 
           onClick= {() => window.location.href ="projects"}>
-              <h2>Projects</h2>
+              <h2 data-usal="fade-u split-letter split-delay-25" >Projects</h2>
           </div>
          </div>
        </div>

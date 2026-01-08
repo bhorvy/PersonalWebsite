@@ -44,8 +44,12 @@ function HeroSection() {
        <div className="row w-100 align-items-center justify-content-center">
          <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style-2" style={{ minHeight: '40vh', minWidth: '40vh'  }}>
            <h2 data-usal="text-shimmer split-letter duration-2000 split-delay-100">Hello, I'm Brennan</h2>
-           <p className="main-p">Computer Science Student at the University of Regina</p>
-           <p className="main-p">Currently: Back to School 📚</p>
+           
+           <p className="main-p mt-2" data-usal="fade-u split-word split-delay-33">Computer Science Student at the University of Regina
+            <br></br>
+              Currently: Back to School 📚
+           </p>
+
          </div>
        </div>
      </div>

@@ -35,16 +35,16 @@ function Contact() {
     <form ref={form} onSubmit={sendEmail}>
          <div className="col-lg-2 d-flex flex-column div-style-2" style={{ minWidth: '70vh' }}>
           <div  className="m-3">
-            <h2 className='mb-3 text-center'>Contact Me</h2>
-            <label className="form-label">Name:</label>
+            <h2 className='mb-3 text-center' data-usal="text-fluid split-letter duration-1750 split-delay-75">Contact Me</h2>
+            <label className="form-label"><b>Name:</b></label>
             <input value={name}  placeholder="Please Enter Your Name" className="form-control" onChange={e => setName(e.target.value)} type="text" name="name" />
             </div> 
             <div  className="m-3">
-            <label  className="form-label">Email:</label>
+            <label  className="form-label"><b>Email:</b></label>
             <input type="email" placeholder="Please Enter Your Email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} name="email" />
             </div>
             <div  className="m-3">
-            <label  className="form-label">Message:</label>
+            <label  className="form-label"><b>Message:</b></label>
             <textarea value={message}  placeholder="Please Enter Your Message" className="form-control" onChange={e => setMessage(e.target.value)} name="message" />
             </div>
             <button className="btn btn-light btn-lg m-3" type="submit" value="Send" >Send</button>

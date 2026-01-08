@@ -22,9 +22,9 @@ export default function HeaderNavBar() {
                     <li className="nav-item">
                     <Link className="nav-link brand-med" aria-current="page" to="contact">Contact</Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                     <a className="nav-link disabled brand-med" aria-disabled="true">Blog</a>
-                    </li>
+                    </li> */}
                 </ul>
                 </div>
             </div>

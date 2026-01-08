@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import '../../App.css';
 
 function ResumeSection() {
  const [scrollY, setScrollY] = useState(0);
@@ -8,7 +7,7 @@ function ResumeSection() {
 
   useEffect(() => {
     if (sectionRef.current) {
-      setSectionTop(sectionRef.current.offsetTop);
+      setSectionTop((sectionRef.current as HTMLElement).offsetTop);
     }
   }, []);
 

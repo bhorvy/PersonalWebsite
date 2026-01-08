@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import '../../App.css';
 
 function AboutMe() {
   const [scrollY, setScrollY] = useState(0);
@@ -8,7 +7,7 @@ function AboutMe() {
 
   useEffect(() => {
     if (sectionRef.current) {
-      setSectionTop(sectionRef.current.offsetTop);
+      setSectionTop((sectionRef.current as HTMLElement).offsetTop);
     }
   }, []);
 
@@ -20,17 +19,17 @@ function AboutMe() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const parallaxOffset = Math.max(0, (scrollY - sectionTop) * 0.3);
 
   return (
     <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
      <img 
-       src="../../../city.jpg" 
-       alt='City Skyline'
+       src="../../../stadium.jpg" 
+       alt='Colorado State Stadium'
        style={{
          width: '100vw',
-         height: '95vh',
+         height: '92vh',
          objectFit: 'cover',
          display: 'block',
          transform: `translateY(${parallaxOffset}px)`,
@@ -52,9 +51,10 @@ function AboutMe() {
        }}
      >
        <div className="row w-100 align-items-center justify-content-center">
-        <div className="col-lg-4 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }} 
-          onClick= {() => window.location.href ="projects"}>
-              <h2 data-usal="fade-u split-letter split-delay-25" >Projects</h2>
+<div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '40vh' ,minWidth: '40vh' }}
+          onClick={()=> window.location.href ="AboutMe"}>
+              <h2 data-usal="fade-u split-letter split-delay-25">About Me</h2>
+              <p data-usal="fade-u split-word split-delay-33">fourth year student, average of 89%. I like building things, physical or virtual. Avid sports fan, Go Broncos! </p>
           </div>
          </div>
        </div>
@@ -63,7 +63,6 @@ function AboutMe() {
 }
 
 export default AboutMe;
-
 
 
 

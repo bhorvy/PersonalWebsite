@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import '../../App.css';
 
 function HeroSection() {
   const [scrollY, setScrollY] = useState(0);

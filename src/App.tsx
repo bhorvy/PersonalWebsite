@@ -7,26 +7,25 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
 function App() {
   return (
     <Router>
-    <div className="App">
-      <header>
-        <HeaderNavBar/>
-      </header>
-      <main className="gradient-bg">
-      <Routes>
+      <div className="App">
+        <header>
+          <HeaderNavBar/>
+        </header>
+        <main className="gradient-bg">
+          <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="projects" element={<Projects />} />
             <Route path="aboutme" element={<AboutMe />} />
             <Route path="contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <footer className="App-footer">
-      <Footer />
-      </footer>
-    </div>
+          </Routes>
+        </main>
+        <footer className="App-footer">
+          <Footer />
+        </footer>
+      </div>
     </Router>
   );
 }

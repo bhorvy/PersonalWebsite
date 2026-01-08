@@ -17,7 +17,7 @@ export default function HeaderNavBar() {
                     <Link className="nav-link brand-med" to="projects">Projects</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link brand-med" href="../../Resume.pdf">Resume</a>
+                    <a className="nav-link brand-med" href="../../PhotosNDocs/Resume.pdf">Resume</a>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link brand-med" aria-current="page" to="contact">Contact</Link>

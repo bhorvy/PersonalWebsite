@@ -14,6 +14,9 @@ export default function HeaderNavBar() {
                     <Link className="nav-link brand-med" aria-current="page" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
+                    <Link className="nav-link brand-med" aria-current="page" to="aboutme">About Me</Link>
+                    </li>
+                    <li className="nav-item">
                     <Link className="nav-link brand-med" to="projects">Projects</Link>
                     </li>
                     <li className="nav-item">

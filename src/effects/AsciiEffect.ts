@@ -19,7 +19,6 @@ interface AsciiEffectOptions {
 }
 
 class AsciiEffect {
-
 	/**
 	 * Constructs a new ASCII effect.
 	 *
@@ -28,7 +27,10 @@ class AsciiEffect {
 	 * @param {AsciiEffect~Options} [options] - The configuration parameter.
 	 */
 
-	
+	setSize: (width: number, height: number) => void;
+	render: (scene: Scene, camera: Camera) => void;
+	domElement: HTMLDivElement;
+
 	constructor( renderer : WebGLRenderer, charSet = ' .:-=+*#%@', options = {} as AsciiEffectOptions ) {
 
 		// ' .,:;=|iI+hHOE#`$';
@@ -110,13 +112,13 @@ class AsciiEffect {
 			// oCanvas.style.height = iHeight;
 
 			oImg = renderer.domElement;
+			const cells = oAscii?.rows[ 0 ]?.cells[ 0 ]
 
-			if ( oImg.style.backgroundColor ) {
+			if ( !oImg.style.backgroundColor || !cells ) 
+				return;
 
-				oAscii.rows[ 0 ].cells[ 0 ].style.backgroundColor = oImg.style.backgroundColor;
-				oAscii.rows[ 0 ].cells[ 0 ].style.color = oImg.style.color;
-
-			}
+			cells.style.backgroundColor = oImg.style.backgroundColor;
+			cells.style.color = oImg.style.color;
 
 			oAscii.cellSpacing = '0';
 			oAscii.cellPadding = '0';
@@ -141,29 +143,21 @@ class AsciiEffect {
 
 		const oCanvas = document.createElement( 'canvas' );
 		if ( ! oCanvas.getContext ) {
-
 			return;
-
 		}
 
 		const oCtx = oCanvas.getContext( '2d' );
 		if ( ! oCtx?.getImageData ) {
-
 			return;
-
 		}
 
 		let aCharList : string[];
 		if ( charSet ) {
-
 			aCharList = ( charSet ).split( '' );
-
 		} else {
-
 			const aDefaultCharList = ( ' .,:;i1tfLCG08@' ).split( '' );
 			const aDefaultColorCharList = ( ' CGO08@' ).split( '' );
 			aCharList = ( bColor ? aDefaultColorCharList : aDefaultCharList );
-
 		}
 
 
@@ -177,7 +171,6 @@ class AsciiEffect {
 		let fLetterSpacing = 0;
 
 		if ( strResolution == 'low' ) {
-
 			switch ( iScale ) {
 
 				case 1 : fLetterSpacing = - 1; break;
@@ -187,11 +180,9 @@ class AsciiEffect {
 				case 5 : fLetterSpacing = - 4.15; break;
 
 			}
-
 		}
 
 		if ( strResolution == 'medium' ) {
-
 			switch ( iScale ) {
 
 				case 1 : fLetterSpacing = 0; break;
@@ -201,11 +192,9 @@ class AsciiEffect {
 				case 5 : fLetterSpacing = - 2.1; break;
 
 			}
-
 		}
 
 		if ( strResolution == 'high' ) {
-
 			switch ( iScale ) {
 
 				case 1 :
@@ -215,7 +204,6 @@ class AsciiEffect {
 				case 5 : fLetterSpacing = - 1; break;
 
 			}
-
 		}
 
 

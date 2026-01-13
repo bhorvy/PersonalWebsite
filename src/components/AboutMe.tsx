@@ -8,12 +8,18 @@ function AsciiRenderer() {
 	const { gl, scene, camera, size } = useThree();
 	const effectRef = useRef<AsciiEffect>(null);
 	useEffect(() => {
-			const effect = new AsciiEffect(gl, ' .:-=+*#%@', {invert: true})
+			const effect = new AsciiEffect(gl, ' .:-=+*#%@', {alpha: true, scale: 0.5, resolution: 0.23})
 			effect.setSize( window.innerWidth, window.innerHeight );
 			effect.domElement.style.color = 'black';
 			effect.domElement.style.backgroundColor = '#F4F3F2';
 
+			effect.domElement.style.position = 'absolute'
+			effect.domElement.style.top = '5vh'
+			effect.domElement.style.left = '0'
+
 			effectRef.current = effect
+
+	gl.domElement.style.display = 'none';
 
     document.body.appendChild(effect.domElement);
 

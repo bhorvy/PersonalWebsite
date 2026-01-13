@@ -2,9 +2,9 @@ import '../App';
 import { AsciiEffect } from '../effects/AsciiEffect';
 import * as THREE from 'three';
 
-let camera : any, controls : any, scene :any, renderer, effect :any;
+let camera : any, controls : any, scene : any, renderer : any, effect : any;
 
-			let sphere : any, plane;
+			let sphere : any , plane;
 
 			const start = Date.now();
 
@@ -41,7 +41,7 @@ let camera : any, controls : any, scene :any, renderer, effect :any;
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.setAnimationLoop( animate );
 
-				effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true, resolution: 0.15, scale: 1, color: false, alpha: false, block: false, strResolution: 'low'} );
+				effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
 				effect.setSize( window.innerWidth, window.innerHeight );
 				effect.domElement.style.color = 'white';
 				effect.domElement.style.backgroundColor = 'black';

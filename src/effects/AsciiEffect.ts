@@ -9,13 +9,13 @@ import type { WebGLRenderer, Scene, Camera } from 'three';
  */
 
 interface AsciiEffectOptions {
-	resolution : number;
-	scale : number;
-	color: boolean;
-	alpha: boolean;
-	block: boolean;
-	invert: boolean;
-	strResolution : "low" | "medium" | "high";
+	resolution? : number;
+	scale? : number;
+	color?: boolean;
+	alpha?: boolean;
+	block?: boolean;
+	invert?: boolean;
+	strResolution? : "low" | "medium" | "high";
 }
 
 class AsciiEffect {

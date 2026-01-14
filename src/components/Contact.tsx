@@ -1,6 +1,49 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../App.css';
+import  AsciiRenderer from './AsciiRenderer';
+import * as THREE from 'three';
+import { Canvas, useFrame } from '@react-three/fiber'
+
+function Capsule1() {
+  const meshRef = useRef<THREE.Mesh>(null!);
+  useFrame(() => {
+    const timer = Date.now();
+    meshRef.current.rotation.x = timer * 0.0002;
+    meshRef.current.rotation.z = timer * 0.0002;
+  });
+
+  return (
+    <mesh ref={meshRef} position={[-210, 25, 0]}>
+      <capsuleGeometry args={[50, 50, 15, 25, 2]}/>
+      <meshPhongMaterial
+        flatShading={true}
+        color={"0xcccccc"}
+        shininess={100}
+      />
+    </mesh>
+  );
+}
+
+function Capsule2() {
+  const meshRef = useRef<THREE.Mesh>(null!);
+  useFrame(() => {
+    const timer = Date.now();
+    meshRef.current.rotation.x = timer * -0.0002;
+    meshRef.current.rotation.z = timer * -0.0002;
+  });
+
+  return (
+    <mesh ref={meshRef} position={[180, 25, 0]}>
+      <capsuleGeometry args={[50, 50, 15, 25, 2]}/>
+      <meshPhongMaterial
+        flatShading={true}
+        color={"0xcccccc"}
+        shininess={100}
+      />
+    </mesh>
+  );
+}
 
 function Contact() {
 
@@ -31,7 +74,23 @@ function Contact() {
   };
 
   return (
-  <div className="w-100 d-flex flex-column align-items-center justify-content-center">    
+    <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}> 
+      <Canvas camera={{ position: [0, 150, 200], fov: 70 }}   style={{ width: '100%', height: '100%' }}>
+             
+        <AsciiRenderer /> 
+        
+        <directionalLight position={[5, 5, 5]} intensity={2} />
+        <directionalLight position={[-5, -5, -5]} intensity={3} />
+  
+        <Capsule1 />
+        <Capsule2 />
+
+      </Canvas>
+  <div className="w-100 d-flex flex-column align-items-center justify-content-center" style={{
+      position: 'absolute',
+			top: '50%',
+			left: '50%',
+			transform: 'translate(-50%, -50%)',}}>    
     <form ref={form} onSubmit={sendEmail}>
          <div className="col-lg-2 d-flex flex-column div-style-3" style={{ minWidth: '70vh' }}>
           <div  className="m-3">
@@ -51,7 +110,7 @@ function Contact() {
          </div>
     </form>
   </div>
-
+</div>
   );
 }
 

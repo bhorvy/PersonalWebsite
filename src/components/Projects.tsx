@@ -33,7 +33,7 @@ function Torus2() {
   });
 
   return (
-    <mesh ref={meshRef} position={[170, 25, 0]}>
+    <mesh ref={meshRef} position={[160, 25, 0]}>
       <torusGeometry args={[80, 10, 16, 100]}/>
       <meshPhongMaterial
         flatShading={true}

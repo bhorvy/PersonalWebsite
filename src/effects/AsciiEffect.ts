@@ -31,7 +31,7 @@ class AsciiEffect {
 	render: (scene: Scene, camera: Camera) => void;
 	domElement: HTMLDivElement;
 
-	constructor( renderer : WebGLRenderer, charSet = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~i!lI;:,\"^`. ', options = {} as AsciiEffectOptions ) {
+	constructor( renderer : WebGLRenderer, charSet = ' .:-=+*#%@', options = {} as AsciiEffectOptions ) {
 
 		// ' .,:;=|iI+hHOE#`$';
 		// darker bolder character set from https://github.com/saw/Canvas-ASCII-Art/
@@ -112,13 +112,10 @@ class AsciiEffect {
 			// oCanvas.style.height = iHeight;
 
 			oImg = renderer.domElement;
-			const cells = oAscii?.rows[ 0 ]?.cells[ 0 ]
-
-			if ( !oImg.style.backgroundColor || !cells ) 
-				return;
-
-			cells.style.backgroundColor = oImg.style.backgroundColor;
-			cells.style.color = oImg.style.color;
+		if ( oImg.style.backgroundColor && oAscii.rows[0]?.cells[0] ) {
+			oAscii.rows[ 0 ].cells[ 0 ].style.backgroundColor = oImg.style.backgroundColor;
+			oAscii.rows[ 0 ].cells[ 0 ].style.color = oImg.style.color;
+		}
 
 			oAscii.cellSpacing = '0';
 			oAscii.cellPadding = '0';

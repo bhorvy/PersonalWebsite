@@ -17,7 +17,7 @@ function AppContent() {
       <header>
         <HeaderNavBar/>
       </header>
-      <main className="gradient-bg">
+      <main>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="Projects" element={<Projects />} />

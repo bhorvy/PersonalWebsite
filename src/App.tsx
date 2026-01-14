@@ -5,27 +5,37 @@ import MainPage from './components/MainPage';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
+function AppContent() {
+  const location = useLocation();
+  const darkPaths = ['/AboutMe', '/Projects', '/Contact'];
+  const isDark = darkPaths.some(p => p === location.pathname || location.pathname.startsWith(p + '/'));
+
+  return (
+    <div className={`App ${isDark ? 'dark-mode' : ''}`}>
+      <header>
+        <HeaderNavBar/>
+      </header>
+      <main className="gradient-bg">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="Projects" element={<Projects />} />
+          <Route path="AboutMe" element={<AboutMe />} />
+          <Route path="Contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <footer className="App-footer">
+        <Footer />
+      </footer>
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header>
-          <HeaderNavBar/>
-        </header>
-        <main className="gradient-bg">
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="aboutme" element={<AboutMe />} />
-            <Route path="contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <footer className="App-footer">
-          <Footer />
-        </footer>
-      </div>
+      <AppContent />
     </Router>
   );
 }

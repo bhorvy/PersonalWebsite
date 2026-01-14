@@ -53,10 +53,11 @@ header {
 }
 
 .div-style-3 {
-  background-color: transparent;
+  background-color: #F4F3F2;
   margin: 25px;
-  color: white;
+  color: black;
   border-radius: 12px;
+  z-index: 12;
 }
 
 .div-style:hover {
@@ -82,4 +83,21 @@ header {
   margin: 25px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.white-text .brand-large,
+.white-text .brand-med,
+.white-text .icons {
+  color: #F4F3F2 !important;
+  fill: #F4F3F2 !important;
+}
+
+.white-text .icons:hover {
+  color: lightskyblue !important;
+  fill: lightskyblue !important;
+}
+
+.App.dark-mode {
+  background-color: black;
+  color: white;
 }

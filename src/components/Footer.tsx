@@ -1,6 +1,13 @@
-export default function HeaderNavBar() {
-    return (
-        <nav className="navbar  navbar-expand-lg border-bottom border-body navbar-color">
+import { useLocation } from 'react-router-dom';
+
+export default function Footer() {
+  const location = useLocation();
+  const darkPaths = ['/AboutMe', '/Projects', '/Contact'];
+  const isDark = darkPaths.some(p => p === location.pathname || location.pathname.startsWith(p + '/'));
+
+  return (
+    <footer className={isDark ? 'white-text' : ''}>
+        <nav className={'navbar navbar-expand-lg border-bottom border-body navbar-color '}>
             <div className="d-flex container-fluid">
                 <div className="d-flex justify-content-center gap-3 mt-2 text-center">
                 <a className="icons" href="https://www.instagram.com/brennan.horvath/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
@@ -15,5 +22,6 @@ export default function HeaderNavBar() {
                 </div>
             </div>
         </nav>
+    </footer>
     )
 }

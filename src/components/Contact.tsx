@@ -14,7 +14,7 @@ function Capsule1() {
   });
 
   return (
-    <mesh ref={meshRef} position={[-210, 25, 0]}>
+    <mesh ref={meshRef} position={[-210, 0, 0]}>
       <capsuleGeometry args={[50, 50, 15, 25, 2]}/>
       <meshPhongMaterial
         flatShading={true}
@@ -34,7 +34,7 @@ function Capsule2() {
   });
 
   return (
-    <mesh ref={meshRef} position={[180, 25, 0]}>
+    <mesh ref={meshRef} position={[180, 0, 0]}>
       <capsuleGeometry args={[50, 50, 15, 25, 2]}/>
       <meshPhongMaterial
         flatShading={true}
@@ -74,7 +74,7 @@ function Contact() {
   };
 
   return (
-    <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}> 
+    <div style={{ width: '100%', height: '80vh', overflow: 'hidden' }}> 
       <Canvas camera={{ position: [0, 150, 200], fov: 70 }}   style={{ width: '100%', height: '100%' }}>
              
         <AsciiRenderer /> 

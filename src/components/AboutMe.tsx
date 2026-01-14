@@ -49,9 +49,9 @@ function Sphere2() {
 
 function AboutMe() {
   return (
-   <div className="ascii-container" style={{ width: '100%', height: '80vh', overflow: 'hidden' }}>
-      <Canvas camera={{ position: [0, 150, 200], fov: 70 }}   style={{ width: '100%', height: '100%' }}
-      >
+   <div style={{ width: '100%', height: '80vh', overflow: 'hidden' }}>
+      <Canvas camera={{ position: [0, 150, 200], fov: 70 }}   style={{ width: '100%', height: '100%' }}>
+        
         <AsciiRenderer /> 
         
         <directionalLight position={[5, 5, 5]} intensity={2} />

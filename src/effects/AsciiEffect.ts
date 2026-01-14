@@ -31,7 +31,7 @@ class AsciiEffect {
 	render: (scene: Scene, camera: Camera) => void;
 	domElement: HTMLDivElement;
 
-	constructor( renderer : WebGLRenderer, charSet = ' .:-=+*#%@', options = {} as AsciiEffectOptions ) {
+	constructor( renderer : WebGLRenderer, charSet = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~i!lI;:,\"^`. ', options = {} as AsciiEffectOptions ) {
 
 		// ' .,:;=|iI+hHOE#`$';
 		// darker bolder character set from https://github.com/saw/Canvas-ASCII-Art/
@@ -170,7 +170,7 @@ class AsciiEffect {
 
 		let fLetterSpacing = 0;
 
-		if ( strResolution == 'low' ) {
+		if ( strResolution === 'low' ) {
 			switch ( iScale ) {
 
 				case 1 : fLetterSpacing = - 1; break;
@@ -182,7 +182,7 @@ class AsciiEffect {
 			}
 		}
 
-		if ( strResolution == 'medium' ) {
+		if ( strResolution === 'medium' ) {
 			switch ( iScale ) {
 
 				case 1 : fLetterSpacing = 0; break;
@@ -194,7 +194,7 @@ class AsciiEffect {
 			}
 		}
 
-		if ( strResolution == 'high' ) {
+		if ( strResolution === 'high' ) {
 			switch ( iScale ) {
 
 				case 1 :
@@ -238,14 +238,14 @@ class AsciiEffect {
 					const iBlue = oImgData[ iOffset + 2 ];
 					const iAlpha = oImgData[ iOffset + 3 ];
 
-					if ( iRed == undefined || iGreen == undefined || iBlue == undefined || iAlpha == undefined )
+					if ( iRed === undefined || iGreen === undefined || iBlue === undefined || iAlpha === undefined )
 						break;
 
 					let fBrightness = ( 0.3 * iRed + 0.59 * iGreen + 0.11 * iBlue ) / 255;
 					// fBrightness = (0.3*iRed + 0.5*iGreen + 0.3*iBlue) / 255;
 
 
-					if ( iAlpha == 0 ) {
+					if ( iAlpha === 0 ) {
 
 						// should calculate alpha instead, but quick hack :)
 						//fBrightness *= (iAlpha / 255);
@@ -267,7 +267,7 @@ class AsciiEffect {
 
 					let strThisChar = aCharList[ iCharIdx ];
 
-					if ( strThisChar === undefined || strThisChar == ' ' )
+					if ( strThisChar === undefined || strThisChar === ' ' )
 						strThisChar = '&nbsp;';
 
 					if ( bColor ) {

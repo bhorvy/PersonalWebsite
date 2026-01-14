@@ -49,6 +49,7 @@ header {
   margin: 25px;
   color: white;
   border-radius: 12px;
+  z-index: 12;
 }
 
 .div-style-3 {

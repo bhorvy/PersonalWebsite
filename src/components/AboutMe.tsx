@@ -14,7 +14,7 @@ function Sphere1() {
   });
 
   return (
-    <mesh ref={meshRef} position={[-500, 0, 0]}>
+    <mesh ref={meshRef} position={[-497, 0, 0]}>
       <sphereGeometry args={[175, 32, 32]} />
       <meshPhongMaterial 
         flatShading={true}

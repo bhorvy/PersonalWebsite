@@ -14,7 +14,7 @@ function Sphere1() {
   });
 
   return (
-    <mesh ref={meshRef} position={[-497, 0, 0]}>
+    <mesh ref={meshRef} position={[-514, 0, 0]}>
       <sphereGeometry args={[175, 32, 32]} />
       <meshPhongMaterial 
         flatShading={true}
@@ -35,7 +35,7 @@ function Sphere2() {
   });
 
   return (
-    <mesh ref={meshRef} position={[465, 0, 0]}>
+    <mesh ref={meshRef} position={[450, 0, 0]}>
       <sphereGeometry args={[175, 32, 32]} />
       <meshPhongMaterial 
         flatShading={true}
@@ -49,7 +49,7 @@ function Sphere2() {
 
 function AboutMe() {
   return (
-   <div className="ascii-container" style={{ position: 'relative', width: '100%', height: '80vh', overflow: 'hidden' }}>
+   <div className="ascii-container" style={{ width: '100%', height: '80vh', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 150, 200], fov: 70 }}   style={{ width: '100%', height: '100%' }}
       >
         <AsciiRenderer /> 
@@ -60,9 +60,9 @@ function AboutMe() {
         <Sphere1 />
         <Sphere2 />
       </Canvas>
-            <div className="col-lg-2 d-flex flex-column align-items-center justify-content-center text-center div-style-3" style={{
-			minWidth: '70vh', 
-	    	position: 'absolute',
+      <div className="text-center div-style-3" style={{
+			minWidth: '40%', 
+	    position: 'absolute',
 			top: '50%',
 			left: '50%',
 			transform: 'translate(-50%, -50%)',}}>

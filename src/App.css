@@ -1,6 +1,6 @@
 .App {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,6 @@ header {
 
 .div-style-3 {
   background-color: #F4F3F2;
-  margin: 25px;
   color: black;
   border-radius: 12px;
   z-index: 12;

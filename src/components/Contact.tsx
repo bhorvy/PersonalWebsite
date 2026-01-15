@@ -14,8 +14,8 @@ function Capsule1() {
   });
 
   return (
-    <mesh ref={meshRef} position={[-210, 0, 0]}>
-      <capsuleGeometry args={[50, 50, 15, 25, 2]}/>
+    <mesh ref={meshRef} position={[-300, 0, 0]}>
+      <capsuleGeometry args={[60, 60, 15, 25, 2]}/>
       <meshPhongMaterial
         flatShading={true}
         color={"0xcccccc"}
@@ -34,8 +34,8 @@ function Capsule2() {
   });
 
   return (
-    <mesh ref={meshRef} position={[180, 0, 0]}>
-      <capsuleGeometry args={[50, 50, 15, 25, 2]}/>
+    <mesh ref={meshRef} position={[250, 0, 0]}>
+      <capsuleGeometry args={[60, 60, 15, 25, 2]}/>
       <meshPhongMaterial
         flatShading={true}
         color={"0xcccccc"}

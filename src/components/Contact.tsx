@@ -106,7 +106,7 @@ function Contact() {
             <label  className="form-label"><b>Message:</b></label>
             <textarea value={message}  placeholder="Please Enter Your Message" className="form-control" onChange={e => setMessage(e.target.value)} name="message" />
             </div>
-            <button className="btn btn-light btn-lg m-3" type="submit" value="Send" >Send</button>
+            <button className="btn btn-dark btn-lg m-3" type="submit" value="Send" >Send</button>
          </div>
     </form>
   </div>

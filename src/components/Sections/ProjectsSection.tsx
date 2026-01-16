@@ -31,7 +31,7 @@ function ProjectSection() {
         style={{ transform: `translateY(${parallaxOffset}px)` }}
       />
       <div className="container text-center section-text">
-        <div className="col-lg-4 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}
+        <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}
           onClick={() => window.location.href = "Projects"}>
           <h2 data-usal="fade-u split-letter split-delay-25" >Projects</h2>
         </div>

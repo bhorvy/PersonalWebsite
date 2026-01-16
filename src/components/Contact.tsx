@@ -86,13 +86,9 @@ function Contact() {
         <Capsule2 />
 
       </Canvas>
-  <div className="w-100 d-flex flex-column align-items-center justify-content-center" style={{
-      position: 'absolute',
-			top: '50%',
-			left: '50%',
-			transform: 'translate(-50%, -50%)',}}>    
+  <div className="subpage-div">    
     <form ref={form} onSubmit={sendEmail}>
-         <div className="col-lg-2 d-flex flex-column div-style-3" style={{ minWidth: '70vh' }}>
+         <div className="d-flex flex-column div-style-3" style={{ minWidth: '70vh' }}>
           <div  className="m-3">
             <h2 className='mb-3 text-center' data-usal="text-fluid split-letter duration-1750 split-delay-75">Contact Me</h2>
             <label className="form-label"><b>Name:</b></label>

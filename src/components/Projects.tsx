@@ -58,19 +58,15 @@ function Projects() {
         <Torus2 />
 
       </Canvas>
-    <div className="w-100 d-flex flex-column align-items-center justify-content-center" style={{
-      position: 'absolute',
-			top: '50%',
-			left: '50%',
-			transform: 'translate(-50%, -50%)',}}>
-      <div className="col-lg-2 d-flex flex-column align-items-center justify-content-center text-center div-style-3 mb-3" style={{ minHeight: '15vh', minWidth: '20vh' }}>
+    <div className="w-100 d-flex flex-column align-items-center subpage-div mt-5">
+      <div className="col-lg-2 d-flex flex-column justify-content-center text-center div-style-3 mb-3" style={{ minHeight: '15vh', minWidth: '20vh' }}>
           <h2 data-usal="text-fluid split-letter duration-1750 split-delay-75">Projects</h2>
       </div>
-      <div className="col-lg-2 d-flex flex-column align-items-center justify-content-center text-center div-style-3 my-3" style={{ minHeight: '30vh', minWidth: '40vh' }}>
+      <div className="col-lg-2 d-flex flex-column justify-content-center text-center div-style-3 my-3" style={{ minHeight: '30vh', minWidth: '40vh' }}>
           <h2 data-usal="text-fluid split-letter duration-1750 split-delay-75">Project 1</h2>
           <p>Developing an AI model to help farmers</p>
       </div>
-      <div className="col-lg-2 d-flex flex-column align-items-center justify-content-center text-center div-style-3 my-3" style={{ minHeight: '30vh', minWidth: '40vh' }}>
+      <div className="col-lg-2 d-flex flex-column justify-content-center text-center div-style-3 my-3" style={{ minHeight: '30vh', minWidth: '40vh' }}>
           <h2 data-usal="text-fluid split-letter duration-1750 split-delay-75" >Project 2</h2>
           <p>Building a game</p>
       </div>

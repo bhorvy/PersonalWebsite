@@ -60,12 +60,7 @@ function AboutMe() {
         <Sphere1 />
         <Sphere2 />
       </Canvas>
-      <div className="text-center div-style-3" style={{
-			minWidth: '40%', 
-	    position: 'absolute',
-			top: '50%',
-			left: '50%',
-			transform: 'translate(-50%, -50%)',}}>
+      <div className="text-center div-style-3 subpage-div">
 			<h2 className="mt-4" data-usal="text-fluid split-letter duration-1750 split-delay-75">About Me</h2>
           	<p className="m-4">My previous experience includes a work term with the Government of Saskatchewan, doing configuration 
             and help desk work. I completed four months at SGI (Saskatchewan Government Insurance), where I was a full stack developer in a C#, TypeScipt environment.

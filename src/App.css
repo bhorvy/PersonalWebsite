@@ -36,6 +36,19 @@ header {
   font-size: 1.2rem;
 }
 
+.subpage-div {
+      z-index: 12;
+      position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%)
+}
+
+.section-div {
+   position: relative;
+   overflow: hidden;
+   height: 95vh
+}
 
 .div-style {
   background-color: black;

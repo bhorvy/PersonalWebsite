@@ -23,7 +23,7 @@ function AboutMe() {
   const parallaxOffset = Math.max(0, (scrollY - sectionTop) * 0.3);
 
   return (
-    <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
+    <div ref={sectionRef} className='section-div'>
      <img 
        src="../../../PhotosNDocs/stadium.jpg" 
        alt='Colorado State Stadium'

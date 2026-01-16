@@ -23,31 +23,54 @@ header {
   min-height: 8vh;
 }
 
-.brand-large{
+.brand-large {
   font-size: 2rem;
 }
+
 .parent-div {
-   min-height: 80vh;
-    display: flex;
-    align-items: center; justify-content: center;
-    flex-direction: column;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
 .brand-med {
   font-size: 1.2rem;
 }
 
 .subpage-div {
-      z-index: 12;
-      position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%)
+  z-index: 12;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .section-div {
-   position: relative;
-   overflow: hidden;
-   height: 95vh
+  position: relative;
+  overflow: hidden;
+  height: 95vh
+}
+
+.section-image {
+   width: 100vw;
+   height: 92vh;
+   display: block;
+   transition: transform 0.1s ease-out;
+   object-fit: cover;
+}
+
+.section-text {
+  height: 100%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1
 }
 
 .div-style {
@@ -79,7 +102,7 @@ header {
 }
 
 .icons {
-   width: 32px;
+  width: 32px;
   height: 32px;
   color: black;
   fill: currentColor;
@@ -88,13 +111,7 @@ header {
 
 .icons:hover {
   transform: scale(1.2);
-  color: lightskyblue; 
-}
-
-.me {
-  margin: 25px;
-  border-radius: 20px;
-  object-fit: cover;
+  color: lightskyblue;
 }
 
 .white-text .brand-large,

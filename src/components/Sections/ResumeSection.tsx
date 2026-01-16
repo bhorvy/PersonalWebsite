@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 function ResumeSection() {
- const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
   const sectionRef = useRef(null);
   const [sectionTop, setSectionTop] = useState(0);
 
@@ -19,43 +19,22 @@ function ResumeSection() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const parallaxOffset = Math.max(0, (scrollY - sectionTop) * 0.3);
   return (
- <div ref={sectionRef} style={{ position: 'relative', margin: 0, padding: 0, overflow: 'hidden', height: '95vh' }}>
-     <img 
-      src="../../../PhotosNDocs/birb.jpg" 
-      alt='Birds in the woods'
-      style={{
-        width: '100vw',
-        height: '95vh',
-        objectFit: 'cover',
-        display: 'block',
-        transform: `translateY(${parallaxOffset}px)`,
-        transition: 'transform 0.1s ease-out'
-       }}
-     />
-     <div 
-       className="container text-center" 
-       style={{ 
-         height: '100%',
-         display: 'flex', 
-         alignItems: 'center', 
-         justifyContent: 'center',
-         position: 'absolute',
-         top: 0,
-         left: 0,
-         right: 0,
-         zIndex: 1
-       }}
-     >
-       <div className="row w-100 align-items-center justify-content-center">
-        <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}  
+    <div ref={sectionRef} className='section-div'>
+      <img
+        src="../../../PhotosNDocs/birb.jpg"
+        alt='Birds in the woods'
+        className='section-image'
+        style={{ transform: `translateY(${parallaxOffset}px)` }}
+      />
+      <div className="container text-center section-text">
+        <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}
           onClick={() => window.open("../../PhotosNDocs/Resume.pdf")}>
-              <h2 data-usal="fade-u split-letter split-delay-25">Resume</h2>
+          <h2 data-usal="fade-u split-letter split-delay-25">Resume</h2>
         </div>
-       </div>
-     </div>
+      </div>
     </div>
   );
 }

@@ -33,7 +33,7 @@ function ExperienceSection() {
       <div className="container text-center section-text">
         <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}
           onClick={() => window.location.href = "Experience"}>
-          <h2 data-usal="split-letter split-delay-25" >Experience</h2>
+          <h2 data-usal="text-shimmer split-letter duration-2000 split-delay-100" >Experience</h2>
         </div>
       </div>
     </div>

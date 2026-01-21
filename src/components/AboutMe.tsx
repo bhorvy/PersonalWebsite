@@ -65,11 +65,11 @@ function AboutMe() {
           	<p className="m-4">My previous experience includes four months at SGI (Saskatchewan Government Insurance), where I was a full stack developer in a C#, React with TypeScipt environment. As well as, 
               a work term with the Government of Saskatchewan, doing configuration 
             and help desk work for 12 months.
-            I have a passion for building good software and leveraging technology to solve problems. I enjoy building personal Experience
-            alongside my coursework. Currently exploring ThreeJS, and devleoping a blackjack game in C++/Lua. 
+            I have a passion for building good software and leveraging technology to solve problems. I enjoy building personal projects
+            alongside my coursework. Currently exploring ThreeJS, and developing a blackjack game in C++/Lua. 
 
             Ex-university football player for the Regina Rams. In my spare time I help out coaching my old high school team. 
-            Enjoy playing games, currently Escape from Tarkov. Love doing puzzles and watching sports and playing recreationally. 
+            Enjoy playing games, currently Deadlock. Love doing puzzles and watching sports and playing recreationally. 
           </p>
         </div>
     </div>

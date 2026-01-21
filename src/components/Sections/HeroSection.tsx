@@ -8,6 +8,7 @@ function HeroSection() {
       setScrollY(window.scrollY);
     };
 
+        handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

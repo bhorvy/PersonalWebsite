@@ -3,13 +3,13 @@ import HeaderNavBar from './components/HeaderNavBar';
 import Footer from './components/Footer';
 import MainPage from './components/MainPage';
 import AboutMe from './components/AboutMe';
-import Projects from './components/Projects';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 function AppContent() {
   const location = useLocation();
-  const darkPaths = ['/AboutMe', '/Projects', '/Contact'];
+  const darkPaths = ['/AboutMe', '/Experience', '/Contact'];
   const isDark = darkPaths.some(p => p === location.pathname || location.pathname.startsWith(p + '/'));
 
   return (
@@ -20,7 +20,7 @@ function AppContent() {
       <main>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="Projects" element={<Projects />} />
+          <Route path="Experience" element={<Experience />} />
           <Route path="AboutMe" element={<AboutMe />} />
           <Route path="Contact" element={<Contact />} />
         </Routes>

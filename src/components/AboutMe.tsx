@@ -62,7 +62,7 @@ function AboutMe() {
       </Canvas>
       <div className="text-center div-style-3 subpage-div">
 			<h2 className="mt-4" data-usal="text-fluid split-letter duration-1750 split-delay-75">About Me</h2>
-          	<p className="m-4">My previous experience includes four months at SGI (Saskatchewan Government Insurance), where I was a full stack developer in a C#, TypeScipt environment. As well as, 
+          	<p className="m-4">My previous experience includes four months at SGI (Saskatchewan Government Insurance), where I was a full stack developer in a C#, React with TypeScipt environment. As well as, 
               a work term with the Government of Saskatchewan, doing configuration 
             and help desk work for 12 months.
             I have a passion for building good software and leveraging technology to solve problems. I enjoy building personal Experience

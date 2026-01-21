@@ -67,7 +67,8 @@ function AboutMe() {
             and help desk work for 12 months.
             I have a passion for building good software and leveraging technology to solve problems. I enjoy building personal projects
             alongside my coursework. Currently exploring ThreeJS, and developing a blackjack game in C++/Lua. 
-
+            <br></br>
+            <br></br>
             Ex-university football player for the Regina Rams. In my spare time I help out coaching my old high school team. 
             Enjoy playing games, currently Deadlock. Love doing puzzles and watching sports and playing recreationally. 
           </p>

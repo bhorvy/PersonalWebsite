@@ -34,7 +34,7 @@ function AboutMe() {
       <div className="container text-center section-text">
         <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style px-2" style={{ minHeight: '40vh', minWidth: '40vh' }}
           onClick={() => window.location.href = "AboutMe"}>
-          <h2 data-usal="split-letter split-delay-25">About Me</h2>
+          <h2 data-usal="text-shimmer split-letter duration-2000 split-delay-100">About Me</h2>
         </div>
       </div>
     </div>

@@ -54,7 +54,7 @@ header {
 }
 
 .section-image {
-   width: 99.8vw;
+   width: 100vw;
    height: 92vh;
    display: inline-flex;
    transition: transform 0.1s ease-out;

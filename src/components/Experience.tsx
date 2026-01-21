@@ -1,8 +1,8 @@
 import '../App.css';
 import AsciiRenderer from './AsciiRenderer';
 import * as THREE from 'three';
-import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 function Torus1() {
   const meshRef = useRef<THREE.Mesh>(null!);
@@ -45,29 +45,11 @@ function Torus2() {
 }
 
 function Experience() {
-  // Adjust these values to match your actual header and footer heights
-  const headerHeight = '60px'; // Change to your header height
-  const footerHeight = '50px'; // Change to your footer height
-
   return (
-    <div style={{ 
-      width: '100%', 
-      height: `calc(100vh - ${headerHeight} - ${footerHeight})`, 
-      overflow: 'hidden', 
-      position: 'relative' 
-    }}>
+    <div style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative' }}>
       <Canvas 
         camera={{ position: [0, 150, 200], fov: 70 }} 
-        style={{ 
-          width: '100%', 
-          height: '100%',
-          position: 'fixed',
-          top: headerHeight,
-          left: 0,
-          right: 0,
-          zIndex: 0,
-          pointerEvents: 'none' // Prevents canvas from blocking clicks
-        }}
+        style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
       >
         <AsciiRenderer />
         <directionalLight position={[5, 5, 5]} intensity={2} />
@@ -75,18 +57,8 @@ function Experience() {
         <Torus1 />
         <Torus2 />
       </Canvas>
-      
-      <div 
-        className="w-100 d-flex flex-column align-items-center justify-content-center subpage-div mt-5"
-        style={{ 
-          position: 'relative', 
-          zIndex: 1, 
-          minHeight: '100%',
-          overflowY: 'auto',
-          paddingBottom: '2rem',
-          pointerEvents: 'auto' // Re-enables clicks on content
-        }}
-      >
+
+      <div  className="d-flex flex-column my-2" style={{zIndex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <div className="col-lg-2 d-flex flex-column justify-content-center text-center div-style-3 mb-3" style={{ minHeight: '15vh', minWidth: '20vh' }}>
           <h2 data-usal="text-fluid split-letter duration-1750 split-delay-75">Experience</h2>
         </div>

@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function HeaderNavBar() {
     const location = useLocation();
-    const whitePaths = ['/AboutMe', '/Projects', '/Contact'];
+    const whitePaths = ['/AboutMe', '/Experience', '/Contact'];
     const isWhite = whitePaths.some(p => p === location.pathname || location.pathname.startsWith(p + '/'));
 
     return (
@@ -21,10 +21,10 @@ export default function HeaderNavBar() {
                     <Link className="nav-link brand-med" aria-current="page" to="AboutMe">About Me</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link brand-med" to="Projects">Projects</Link>
+                    <a className="nav-link brand-med" href="../../PhotosNDocs/Resume.pdf">Resume</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link brand-med" href="../../PhotosNDocs/Resume.pdf">Resume</a>
+                    <Link className="nav-link brand-med" aria-current="page" to="Experience">Experience</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link brand-med" aria-current="page" to="Contact">Contact</Link>

@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
   const location = useLocation();
-  const darkPaths = ['/AboutMe', '/Projects', '/Contact'];
+  const darkPaths = ['/AboutMe', '/Experience', '/Contact'];
   const isDark = darkPaths.some(p => p === location.pathname || location.pathname.startsWith(p + '/'));
 
   return (

@@ -1,6 +1,6 @@
 import AboutMeSection from './Sections/AboutMeSection';
 import HeroSection from './Sections/HeroSection'
-import ProjectSection from './Sections/ProjectsSection';
+import ExperienceSection from './Sections/ExperienceSection';
 import ResumeSection from './Sections/ResumeSection';
 import ContactSection from './Sections/ContactSection';
 
@@ -14,11 +14,11 @@ export default function MainPage() {
 
             <div style={{minHeight: '15vh'}}></div>
 
-            <ProjectSection/>
+            <ResumeSection/>
 
             <div style={{minHeight: '15vh'}}></div>
 
-            <ResumeSection/>
+            <ExperienceSection/>
 
             <div style={{minHeight: '15vh'}}></div>
 

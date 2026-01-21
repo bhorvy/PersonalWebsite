@@ -16,7 +16,6 @@ function ResumeSection() {
       setScrollY(window.scrollY);
     };
 
-        handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,7 +32,7 @@ function ResumeSection() {
       <div className="container text-center section-text">
         <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style" style={{ minHeight: '30vh', minWidth: '40vh' }}
           onClick={() => window.open("../../PhotosNDocs/Resume.pdf")}>
-          <h2 data-usal="fade-u split-letter split-delay-25">Resume</h2>
+          <h2 data-usal="split-letter split-delay-25">Resume</h2>
         </div>
       </div>
     </div>

@@ -65,7 +65,7 @@ function Contact() {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log('SUCCESS!'); 
         },
         (error : any) => {
           console.log('FAILED...', error.text);

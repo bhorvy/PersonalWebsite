@@ -60,8 +60,8 @@ function Contact() {
   setMessage("")
 
   emailjs
-      .sendForm('service_yticz8b', 'template_798uivg', form.current, {
-        publicKey: '674y7Unhr9dUumU2a',
+      .sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID || '', process.env.REACT_APP_EMAIL_TEMPLATE_ID || '', form.current, {
+        publicKey: process.env.REACT_APP_EMAIL_KEY || '',
       })
       .then(
         () => {

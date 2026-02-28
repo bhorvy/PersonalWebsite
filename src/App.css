@@ -56,7 +56,7 @@ header {
 .section-image {
    width: 100vw;
    height: 92vh;
-   display: block;
+   display: inline-flex;
    transition: transform 0.1s ease-out;
    object-fit: cover;
 }
@@ -129,4 +129,16 @@ header {
 .App.dark-mode {
   background-color: black;
   color: white;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5vh;
+  height: 0.5vh;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: darkslategray;
+  mix-blend-mode: difference;
+  border-radius: 12px;
 }

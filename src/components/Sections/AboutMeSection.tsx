@@ -16,6 +16,7 @@ function AboutMe() {
       setScrollY(window.scrollY);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,10 +32,9 @@ function AboutMe() {
         style={{ transform: `translateY(${parallaxOffset}px)` }}
       />
       <div className="container text-center section-text">
-        <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style px-2" style={{ minHeight: '40vh', minWidth: '40vh' }}
+        <div className="col-lg-5 d-flex flex-column align-items-center justify-content-center text-center div-style px-2" style={{ minHeight: '30vh', minWidth: '40vh' }}
           onClick={() => window.location.href = "AboutMe"}>
-          <h2 data-usal="fade-u split-letter split-delay-25">About Me</h2>
-          <p data-usal="fade-u split-word split-delay-33">Fourth year student, average of 89%. I like building things, physical or virtual. Avid sports fan, Go Broncos! </p>
+          <h2 data-usal="text-shimmer split-letter duration-2000 split-delay-100">About Me</h2>
         </div>
       </div>
     </div>
